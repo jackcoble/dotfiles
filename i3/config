@@ -151,5 +151,19 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bar {
+    position          top
+    workspace_buttons yes
+    status_command    /home/jack/dev/dotfiles/bin/status
+    font pango:Dejavu Sans Mono 9
+
+    colors {
+        statusline $white
+        background #101010
+        focused_workspace $vdarkgrey $vdarkgrey $white
+        inactive_workspace $darkgrey $darkgrey #white
+    }
+}
+
 # execute these on i3 start
 exec $HOME/dev/dotfiles/bin/autostart.sh
