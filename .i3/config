@@ -124,6 +124,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# scrot screenshot
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Syncthing/Screenshots'
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -164,6 +167,11 @@ bar {
         inactive_workspace $darkgrey $darkgrey #white
     }
 }
+
+# Sound control for multimedia keyboards
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5- unmute"
+bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 # execute these on i3 start
 exec $HOME/dev/dotfiles/bin/autostart.sh

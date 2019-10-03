@@ -5,3 +5,4 @@ setxkbmap gb
 
 # Set wallpaper
 feh --bg-scale $HOME/dev/dotfiles/.config/wallpaper.jpg
+
