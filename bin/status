@@ -41,12 +41,14 @@ while :; do
     RAM=$(awk '/MemTotal:/{total=$2}/MemAvailable:/{free=$2;print int(100-100/(total/free))}' /proc/meminfo)
     DATE=$(date "+%d/%m/%y %H:%M")
     CHAR=$(chargin)
-    #NETWORK=$(current_network.py)
+    NETWORK=$(iw dev | grep ssid | awk '{print $2}')
+		PUBIP=$(curl https://ipinfo.io/ip)
 
     output=''
-    #text 'ﯱ ' $GRAY
-    #text " $NETWORK"
-    #text ' | ' $GRAY
+    text "$NETWORK"
+    text ' | ' $GRAY
+		text "WAN $PUBIP"
+		text ' | ' $GRAY
     text '⚡ ' $CHAR
     text "$BATTERY" $WHITE
     text ' | ' $GRAY
