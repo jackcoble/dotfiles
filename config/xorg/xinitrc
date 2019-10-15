@@ -3,5 +3,5 @@
 # set keyboard layout to uk
 setxkbmap -model thinkpad -layout gb
 
-# launch dwm
-exec dwm
+# launch bspwm
+exec bspwm
