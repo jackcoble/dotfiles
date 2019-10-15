@@ -1,0 +1,14 @@
+#!/bin/bash
+
+HOST=https://s.jackkdev.xyz
+TOKEN=AUTH_TOKEN
+
+if [ $# -eq 0 ]
+  then
+    echo 'No argument supplied'
+    exit 1
+  else
+    url=$(curl --silent --header "Token: $TOKEN" -F ''file=@"$1"'' $HOST)
+    echo $url
+    echo $url | xclip -selection clipboard
+fi
