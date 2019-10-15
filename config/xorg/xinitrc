@@ -1,0 +1,7 @@
+#!/bin/bash -x
+
+# set keyboard layout to uk
+setxkbmap -model thinkpad -layout gb
+
+# launch dwm
+exec dwm
