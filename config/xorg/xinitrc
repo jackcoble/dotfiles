@@ -3,5 +3,8 @@
 # set keyboard layout to uk
 setxkbmap -model thinkpad -layout gb
 
+# set wallpaper
+feh --bg-fill --no-fehbg $HOME/.config/wallpaper/default
+
 # launch bspwm
 exec bspwm
