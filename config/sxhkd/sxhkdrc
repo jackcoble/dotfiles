@@ -4,7 +4,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show run -config $HOME/.config/rofi.conf
+	rofi -show run -config $HOME/.config/rofi/rofi.conf
 
 # screenshot
 Print
