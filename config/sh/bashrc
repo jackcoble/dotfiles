@@ -1,0 +1,4 @@
+# add $HOME/.bin to PATH
+if [ -d "$HOME/.bin" ] ; then
+  PATH="$PATH:$HOME/.bin"
+fi
