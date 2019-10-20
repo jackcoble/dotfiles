@@ -8,7 +8,7 @@ super + @space
 
 # screenshot
 Print
-	screenshot
+	$HOME/.bin/screenshot
 
 # volume
 XF86AudioRaiseVolume
