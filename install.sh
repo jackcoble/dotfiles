@@ -30,5 +30,7 @@ ln -sf "$DOTFILES_HOME"/config/sh/bashrc $HOME/.bashrc
 # bin scripts
 ln -sf "$DOTFILES_HOME"/bin/upload $HOME/.bin/upload
 ln -sf "$DOTFILES_HOME"/bin/screenshot $HOME/.bin/screenshot
+ln -sf "$DOTFILES_HOME"/bin/monitors $HOME/.bin/monitors
+ln -sf "$DOTFILES_HOME"/bin/jellyfin $HOME/.bin/jellyfin
 
 echo "dotfiles install complete"
