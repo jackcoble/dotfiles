@@ -2,3 +2,5 @@
 if [ -d "$HOME/.bin" ] ; then
   PATH="$PATH:$HOME/.bin"
 fi
+
+export TERM=xterm-256color
