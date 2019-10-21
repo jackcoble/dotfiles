@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HOST=https://s.jackkdev.xyz
-TOKEN=AUTH_TOKEN
+TOKEN=$UPLOAD_TOKEN
 
 if [ $# -eq 0 ]
   then
