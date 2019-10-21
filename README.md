@@ -12,6 +12,7 @@ The repository contains my dotfiles and scripts for my Linux machines.
 * [rofi](https://github.com/davatorium/rofi)
 * [sxhkd](https://github.com/baskerville/sxhkd)
 * [tmux](https://github.com/tmux/tmux)
+* [yabar](https://github.com/geommer/yabar)
 
 ## bin/
 * screenshot - snap an area of the screen
