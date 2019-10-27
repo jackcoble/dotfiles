@@ -1,2 +1,2 @@
 #!/bin/sh
-chromium --app="https://jellyfin.jackkdev.xyz"
+chromium --app="http://localhost:8096"
