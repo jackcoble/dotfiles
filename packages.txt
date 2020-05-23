@@ -1,0 +1,8 @@
+xorg-minimal
+neovim
+bspwm
+sxhkd
+tmux
+alacritty
+polybar
+xf86-video-intel
