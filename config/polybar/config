@@ -7,36 +7,56 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
+[settings]
+format-foreground =
+format-underline = #268bd2
+format-background = ${colors.background-alt}
+format-padding = 1
+format-overline =
+format-spacing =
+format-margin = 0
+format-offset =
+screenchange-reload = true
+
 [global/wm]
 margin-top = 0
 margin-bottom = 0 
 
 [bar/bar]
-width = 100%
-height = 25
-fixed-center = false
 monitor = ${env:MONITOR:}
 wm-restack = bspwm
+enable-ipc = true
+fixed-center = false
+bottom = false
+separator =
+
+width = 100%
+height = 32
+offset-x = 0
+offset-y = 0
+radius = 0.0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
-line-color = #f00
 
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
+padding = 0
+module-margin-left = 0
 module-margin-right = 2
 
 font-0 = Terminus:pixelsize=12;1
 font-1 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 
-modules-left = bspwm
+modules-left = bspwm xwindow
 modules-right = battery
 
 tray-position = right
+tray-padding = 1
+tray-background = ${colors.background-alt}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-scale = 1.0
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -60,18 +80,18 @@ label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+format-underline =
+format-background =
+format-padding =
+
 [module/battery]
 type = custom/script
 exec = polybattery
 label = "%output%"
 interval = 30
-
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
 
 ; vim:ft=dosini
