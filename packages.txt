@@ -11,3 +11,4 @@ xdo
 setxkbmap
 acpi
 noto-fonts-emoji
+curl
