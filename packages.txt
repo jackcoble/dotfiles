@@ -12,3 +12,4 @@ setxkbmap
 acpi
 noto-fonts-emoji
 curl
+picom

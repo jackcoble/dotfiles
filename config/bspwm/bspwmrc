@@ -2,6 +2,7 @@
 bspc rule -r "*"
 
 # Autostart
+picom -b --experimental-backends &
 launchpolybar &
 
 # Monitors
