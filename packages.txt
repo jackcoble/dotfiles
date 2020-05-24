@@ -8,3 +8,4 @@ polybar
 xf86-video-intel
 terminus-font
 xdo
+setxkbmap
