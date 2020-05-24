@@ -25,5 +25,6 @@ ln -sf $path/config/sxhkd $HOME/.config/sxhkd
 
 # Individual files
 ln -sf $path/config/tmux/tmux.conf $HOME/.tmux.conf
+ln -sf $path/config/wall.jpg $HOME/.config
 
 # Install custom scripts

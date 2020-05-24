@@ -3,6 +3,7 @@ bspc rule -r "*"
 
 # Autostart
 picom -b --experimental-backends &
+nitrogen --set-scaled --head=0 ~/.config/wall.jpg &
 launchpolybar &
 
 # Monitors
