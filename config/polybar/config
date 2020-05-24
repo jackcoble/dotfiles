@@ -44,7 +44,7 @@ font-0 = Terminus:pixelsize=12;1
 font-1 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 
 modules-left = bspwm xwindow
-modules-right = battery
+modules-right = memory battery
 
 tray-position = right
 tray-padding = 1
@@ -84,5 +84,12 @@ type = custom/script
 exec = polybattery
 label = "%output%"
 interval = 30
+
+[module/memory]
+type = custom/script
+exec = polymemory
+label = "%output%"
+interval = 10
+format-prefix = "🧠 "
 
 ; vim:ft=dosini
