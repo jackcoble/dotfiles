@@ -9,3 +9,5 @@ xf86-video-intel
 terminus-font
 xdo
 setxkbmap
+acpi
+noto-fonts-emoji
