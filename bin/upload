@@ -1,0 +1,24 @@
+#!/bin/bash
+# upload
+
+MC_CLI=/usr/bin/mc
+
+# Get the date in YYYY-MM-DD format
+DATE=$(date '+%Y-%m-%d')
+
+if [ $# -eq 0 ]
+    then
+        echo "No file was supplied..."
+        exit 0;
+    else
+        # Upload the file to the MinIO Bucket
+        $MC_CLI cp "$1" "minio/public/$DATE/"
+
+        # Get base name of file
+        base=$(basename "$1")
+
+        # Copy the resulting URL to our clipboard and output to terminal
+        URL=https://s.3xpl0its.xyz/$DATE/$base
+        echo $URL | xclip -selection clipboard;
+        echo $URL
+fi
