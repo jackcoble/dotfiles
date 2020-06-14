@@ -14,3 +14,4 @@ noto-fonts-emoji
 curl
 picom
 nitrogen
+scrot
