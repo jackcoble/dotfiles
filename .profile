@@ -1,8 +1,11 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export PATH="$PATH:/home/jack/dotfiles/scripts:/home/jack/dotfiles/scripts/polybar"
+# Scripts
+export PATH=$PATH:~/.scripts
+export PATH=$PATH:~/.local/bin
+export PATH=$PATH:$HOME/.scripts
 
+# Default Applications
 export EDITOR="nvim"
-export VISUAL="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
