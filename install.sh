@@ -36,6 +36,12 @@ ln -sf $path/config/sxhkd $HOME/.config/sxhkd
 # Individual files
 ln -sf $path/config/tmux/tmux.conf $HOME/.tmux.conf
 
+# Scripts - put in ~/.local/bin
+[ ! -d $HOME/.local/bin ] && mkdir $HOME/.local/bin
+
+ln -sf $path/bin/upload $HOME/.local/bin/upload
+ln -sf $path/bin/screenshot $HOME/.local/bin/screenshot
+
 echo "Dotfiles Installation Complete!"
 
 # Install FiraCode Nerd font
