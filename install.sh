@@ -2,7 +2,17 @@
 
 path=$(pwd)
 
-# Install files to Home directory
+# Install Void Linux packages
+echo 'Installing Specified Packages from "packages.txt"'
+
+sudo xbps-install -Syu
+sudo xbps-install -Sy $(cat $path/packages.txt)
+
+echo "Package Installation Complete!"
+
+# Install Dotfiles to Home directory
+echo "Installing Dotfiles..."
+
 ln -sf $path/.bashrc $HOME/.bashrc
 ln -sf $path/.gitconfig $HOME/.gitconfig
 ln -sf $path/.profile $HOME/.profile
@@ -14,9 +24,6 @@ ln -sf $path/.xinitrc $HOME/.xinitrc
 [ -d $HOME/.config/bspwm ] && rm -rf $HOME/.config/bspwm
 ln -sf $path/config/bspwm $HOME/.config/bspwm
 
-[ -d $HOME/.config/nvim ] && rm -rf $HOME/.config/nvim
-ln -sf $path/config/nvim $HOME/.config/nvim
-
 [ -d $HOME/.config/polybar ] && rm -rf $HOME/.config/polybar
 ln -sf $path/config/polybar $HOME/.config/polybar
 
@@ -25,6 +32,15 @@ ln -sf $path/config/sxhkd $HOME/.config/sxhkd
 
 # Individual files
 ln -sf $path/config/tmux/tmux.conf $HOME/.tmux.conf
-ln -sf $path/config/wall.jpg $HOME/.config
 
-# Install custom scripts
+echo "Dotfiles Installation Complete!"
+
+# Install FiraCode Nerd font
+echo "Downloading Fonts..."
+
+wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip"
+mkdir -p ~/.local/share/fonts
+unzip FiraCode.zip -d ~/.local/share/fonts
+fc-cache -fv
+
+echo "Font Installation Complete!"
