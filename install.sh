@@ -21,6 +21,9 @@ ln -sf $path/.xinitrc $HOME/.xinitrc
 # Install config files into Config directory
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
 
+[ -d $HOME/.config/alacritty ] && rm -rf $HOME/.config/alacritty
+ln -sf $path/config/alacritty $HOME/.config/alacritty
+
 [ -d $HOME/.config/bspwm ] && rm -rf $HOME/.config/bspwm
 ln -sf $path/config/bspwm $HOME/.config/bspwm
 
@@ -42,5 +45,6 @@ wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.
 mkdir -p ~/.local/share/fonts
 unzip FiraCode.zip -d ~/.local/share/fonts
 fc-cache -fv
+rm FiraCode.zip
 
 echo "Font Installation Complete!"
