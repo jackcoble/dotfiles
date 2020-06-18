@@ -1,5 +1,5 @@
 # Change Key Speed
-xset r rate 210 40
+#xset r rate 210 40
 
 # Scripts
 export PATH=$PATH:~/.scripts
