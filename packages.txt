@@ -16,3 +16,4 @@ nitrogen
 scrot
 picom
 xprop
+xset
