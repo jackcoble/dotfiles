@@ -12,8 +12,8 @@ acpi
 noto-fonts-emoji
 curl
 wget
-nitrogen
 scrot
 picom
 xprop
 xset
+unzip

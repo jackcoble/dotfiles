@@ -37,7 +37,7 @@ ln -sf $path/config/sxhkd $HOME/.config/sxhkd
 ln -sf $path/config/tmux/tmux.conf $HOME/.tmux.conf
 
 # Scripts - put in ~/.local/bin
-[ ! -d $HOME/.local/bin ] && mkdir $HOME/.local/bin
+mkdir -p $HOME/.local/bin
 
 ln -sf $path/bin/upload $HOME/.local/bin/upload
 ln -sf $path/bin/screenshot $HOME/.local/bin/screenshot
