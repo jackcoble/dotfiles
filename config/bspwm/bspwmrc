@@ -2,7 +2,7 @@
 bspc rule -r "*"
 
 # Autostart
-source ~/.profile
+#source ~/.profile
 picom -b --experimental-backends &
 nitrogen --set-scaled --head=0 ~/.config/wall.jpg &
 $HOME/.config/polybar/launchpolybar &
