@@ -2,13 +2,7 @@
 The repository contains my dotfiles and scripts for my Void Linux machines.
 
 ## Usage
-**Install the packages from the package list.**
+The `install.sh` script will install all the necessary dependencies for my Void Linux machine, as well as install my Dotfiles and fonts from NerdFont. To install, just run the following command.
 ```bash
-sudo xbps-install -Syu
-sudo xbps-install -Sy $(cat packages.txt)
-```
-
-**Install the Dotfiles**
-```
-./install.sh
+bash install.sh
 ```
