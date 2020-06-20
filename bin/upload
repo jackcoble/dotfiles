@@ -22,5 +22,5 @@ if [ $# -eq 0 ]
         echo $URL | xclip -selection clipboard;
         
         # Dunst notification
-        notify-send --expire-time=5000 -i view-fullscreen "MinIO Upload" " Uploaded $base to MinIO server!"
+        notify-send --expire-time=5000 -i view-fullscreen "MinIO Upload" "  Uploaded $base to MinIO server!"
 fi
