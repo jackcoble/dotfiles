@@ -31,9 +31,9 @@
     show_indicators = yes
 
 [urgency_low]
-    background = "#222222"
-    foreground = "#888888"
-    timeout = 10
+    background = "#1f1f1f"
+    foreground = "#ffffff"
+    timeout = 4
 
 [urgency_normal]
     background = "#1f1f1f"
@@ -41,7 +41,6 @@
     timeout = 10
 
 [urgency_critical]
-    background = "#900000"
+    background = "#1f1f1f"
     foreground = "#ffffff"
-    frame_color = "#ff0000"
-    timeout = 0
+    timeout = 20
