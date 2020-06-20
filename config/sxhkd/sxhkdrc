@@ -35,7 +35,7 @@ super + {0-9}
 	bspc desktop -f {0-9}
 
 # Cycle through Desktops
-super + alt + {Left, Right}
+super + alt + {h, l}
 	bspc desktop -f {prev, next}
 
 # Fullscreen
