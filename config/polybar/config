@@ -36,7 +36,6 @@ height = 25
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-;padding-left = 1
 padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
@@ -61,8 +60,7 @@ cursor-scroll = ns-resize
 type = internal/bspwm
 
 label-focused = %name%
-label-focused-background = ${colors.background-wm}
-label-focused-underline = ${colors.primary}
+;label-focused-background = ${colors.background-wm}
 label-focused-padding = 1
 
 label-occupied = %name%
