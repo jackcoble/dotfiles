@@ -32,9 +32,6 @@ border-bottom-color = ${colors.bordercolor}
 
 width = 100%
 height = 25
-;offset-x = 0
-;offset-y = 0
-;radius = 0.0
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -47,7 +44,7 @@ font-0 = Fira Code Nerd Font:pixelsize=12;1
 font-1 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 
 modules-left = bspwm xwindow
-modules-right = memory updates
+modules-right = cpu memory updates
 
 tray-position = right
 tray-padding = 1
@@ -78,10 +75,16 @@ label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
+; ==================
+; Custom Modules
+; ==================
+
+; Display window name
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
 
+; Display RAM usage
 [module/memory]
 type = custom/script
 exec = $HOME/.config/polybar/scripts/polymemory
@@ -89,10 +92,18 @@ label = "%output%"
 interval = 10
 format-prefix = " "
 
+; Display package updates
 [module/updates]	
 type = custom/script	
 exec = $HOME/.config/polybar/scripts/polypackagecount	
 label = "%output%"	
 interval = 3600
+
+; Display CPU usage
+[module/cpu]
+type = internal/cpu
+interval = 2
+label = %percentage%%
+format-prefix = " "
 
 ; vim:ft=dosini
