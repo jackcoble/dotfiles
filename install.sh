@@ -34,11 +34,9 @@ ln -sf $path/config/sxhkd $HOME/.config/sxhkd
 # Individual files
 ln -sf $path/.tmux.conf $HOME/.tmux.conf
 
-# Scripts - put in ~/.local/bin
-mkdir -p $HOME/.local/bin
-
-ln -sf $path/bin/upload $HOME/.local/bin/upload
-ln -sf $path/bin/screenshot $HOME/.local/bin/screenshot
+# Scripts - them in ~/.bin
+mkdir -p $HOME/.bin
+ln -sf $path/bin $HOME/.bin
 
 echo "Dotfiles Installation Complete!"
 
