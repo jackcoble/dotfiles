@@ -16,4 +16,4 @@ export PS1;
 # Default applications
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="brave"
+export BROWSER="firefox"
