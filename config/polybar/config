@@ -40,7 +40,7 @@ font-0 = Fira Code Nerd Font:pixelsize=12;1
 font-1 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 
 modules-left = bspwm xwindow
-modules-right = memory battery
+modules-right = memory updates
 
 tray-position = right
 tray-padding = 1
@@ -81,5 +81,11 @@ exec = $HOME/.config/polybar/scripts/polymemory
 label = "%output%"
 interval = 10
 format-prefix = " "
+
+[module/updates]	
+type = custom/script	
+exec = $HOME/.config/polybar/scripts/polypackagecount	
+label = "%output%"	
+interval = 3600
 
 ; vim:ft=dosini
