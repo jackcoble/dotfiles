@@ -9,7 +9,6 @@ xf86-video-intel
 xdo
 setxkbmap
 acpi
-noto-fonts-emoji
 curl
 wget
 scrot
@@ -19,3 +18,4 @@ xset
 unzip
 dunst
 dbus
+noto-fonts-ttf
