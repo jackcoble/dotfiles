@@ -8,7 +8,7 @@ nitrogen --set-scaled --head=0 ~/.config/wall.jpg &
 $HOME/.config/polybar/launchpolybar &
 
 # Monitors
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
 
 # Window manager settings
 bspc config focus_follows_pointer true
