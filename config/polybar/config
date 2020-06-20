@@ -43,7 +43,7 @@ font-0 = Fira Code Nerd Font:pixelsize=10;1
 font-1 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 
 modules-left = bspwm xwindow
-modules-right = cpu memory updates
+modules-right = cpu memory updates date
 
 tray-position = right
 tray-padding = 1
@@ -103,5 +103,13 @@ type = internal/cpu
 interval = 2
 label = %percentage:2%%
 format-prefix = " "
+
+; Show the current time
+[module/date]
+type = internal/date
+label = %{F#666}%{F-} %date%  %{F#91aa97}%{F-} %time%
+date = %d-%m-%Y
+time = %H:%M
+interval = 5
 
 ; vim:ft=dosini
