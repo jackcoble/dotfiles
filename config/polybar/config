@@ -37,8 +37,8 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 padding = 0
-module-margin-left = 0.1
-module-margin-right = 0.1
+module-margin-left = 1
+module-margin-right = 1
 
 font-0 = Fira Code Nerd Font:pixelsize=10;1
 font-1 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
