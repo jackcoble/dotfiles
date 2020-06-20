@@ -10,7 +10,6 @@ bordercolor = #4c566a
 
 [settings]
 format-background = ${colors.background-alt}
-format-margin = 0
 screenchange-reload = true
 
 [global/wm]
