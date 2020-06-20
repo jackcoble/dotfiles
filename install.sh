@@ -13,7 +13,6 @@ echo "Package Installation Complete!"
 # Install Dotfiles to Home directory
 echo "Installing Dotfiles..."
 
-ln -sf $path/.bashrc $HOME/.bashrc
 ln -sf $path/.gitconfig $HOME/.gitconfig
 ln -sf $path/.profile $HOME/.profile
 ln -sf $path/.xinitrc $HOME/.xinitrc
