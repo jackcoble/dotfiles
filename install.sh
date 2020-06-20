@@ -40,6 +40,9 @@ ln -sf $path/config/picom $HOME/.config/picom
 [ -d $HOME/.config/sxhkd ] && rm -rf $HOME/.config/sxhkd
 ln -sf $path/config/sxhkd $HOME/.config/sxhkd
 
+# Wallpaper
+ln -sf $path/config/wall.jpg $HOME/.config/wall.jpg
+
 # Scripts - them in ~/.bin
 ln -sf $path/bin $HOME/.bin
 
