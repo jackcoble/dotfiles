@@ -9,7 +9,7 @@ alert = #ed0b0b
 
 [settings]
 format-background = ${colors.background-alt}
-format-padding = 1
+;format-padding = 1
 format-margin = 0
 screenchange-reload = true
 
