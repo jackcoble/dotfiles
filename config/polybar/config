@@ -107,7 +107,7 @@ format-prefix = " "
 ; Show the current time
 [module/date]
 type = internal/date
-label = %{F#666}%{F-} %date%  %{F#91aa97}%{F-} %time%
+label =  %date%  %time%
 date = %d-%m-%Y
 time = %H:%M
 interval = 5
