@@ -14,7 +14,6 @@ echo "Package Installation Complete!"
 echo "Installing Dotfiles..."
 
 ln -sf $path/.gitconfig $HOME/.gitconfig
-ln -sf $path/.profile $HOME/.profile
 ln -sf $path/.xinitrc $HOME/.xinitrc
 
 # Install config files into Config directory
