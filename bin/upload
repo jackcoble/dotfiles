@@ -20,5 +20,9 @@ if [ $# -eq 0 ]
         # Copy the resulting URL to our clipboard and output to terminal
         URL=https://s.3xpl0its.xyz/$DATE/$base
         echo $URL | xclip -selection clipboard;
-        echo $URL
+        
+        # Dunst notification
+        notify-send --expire-time=5000 -i view-fullscreen "File Upload" "Uploaded $base to server!"
+
+        #echo $URL
 fi
