@@ -38,14 +38,12 @@ super + {0-9}
 super + alt + {Left, Right}
 	bspc desktop -f {prev, next}
 
-# ==============
-# System Control
-# ==============
-
-# TODO
+# Fullscreen
+super + f
+	bspc node -t \~fullscreen
 
 # ==============
-# App Launchers
+# Programs
 # ==============
 
 # Terminal
