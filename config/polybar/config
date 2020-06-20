@@ -8,7 +8,6 @@ primary = #3c71ea
 alert = #ed0b0b
 
 [settings]
-format-underline = #268bd2
 format-background = ${colors.background-alt}
 format-padding = 1
 format-margin = 0
