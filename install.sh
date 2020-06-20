@@ -38,7 +38,6 @@ ln -sf $path/config/polybar $HOME/.config/polybar
 ln -sf $path/config/sxhkd $HOME/.config/sxhkd
 
 # Scripts - them in ~/.bin
-mkdir -p $HOME/.bin
 ln -sf $path/bin $HOME/.bin
 
 echo "Dotfiles Installation Complete!"
