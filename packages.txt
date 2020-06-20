@@ -19,3 +19,4 @@ unzip
 dunst
 dbus
 noto-fonts-ttf
+xclip
