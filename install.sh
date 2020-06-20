@@ -28,6 +28,9 @@ ln -sf $path/config/alacritty $HOME/.config/alacritty
 [ -d $HOME/.config/bspwm ] && rm -rf $HOME/.config/bspwm
 ln -sf $path/config/bspwm $HOME/.config/bspwm
 
+[ -d $HOME/.config/dunst ] && rm -rf $HOME/.config/dunst
+ln -sf $path/config/dunst $HOME/.config/dunst
+
 [ -d $HOME/.config/polybar ] && rm -rf $HOME/.config/polybar
 ln -sf $path/config/polybar $HOME/.config/polybar
 
