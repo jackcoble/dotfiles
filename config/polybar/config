@@ -104,7 +104,7 @@ interval = 3600
 [module/cpu]
 type = internal/cpu
 interval = 2
-label = %percentage%%
+label = %percentage:2%%
 format-prefix = " "
 
 ; vim:ft=dosini
