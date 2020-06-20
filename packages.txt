@@ -17,3 +17,5 @@ picom
 xprop
 xset
 unzip
+dunst
+dbus
