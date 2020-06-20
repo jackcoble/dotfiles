@@ -101,7 +101,7 @@ interval = 3600
 [module/cpu]
 type = internal/cpu
 interval = 2
-label = %percentage:2%%
+label = %percentage%%
 format-prefix = " "
 
 ; Show the current time
