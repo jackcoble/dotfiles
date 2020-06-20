@@ -79,17 +79,11 @@ label-empty-padding = 1
 type = internal/xwindow
 label = %title:0:30:...%
 
-[module/battery]
-type = custom/script
-exec = $HOME/.config/polybar/scripts/polybattery
-label = "%output%"
-interval = 30
-
 [module/memory]
 type = custom/script
 exec = $HOME/.config/polybar/scripts/polymemory
 label = "%output%"
 interval = 10
-format-prefix = "🧠 "
+format-prefix = " "
 
 ; vim:ft=dosini
