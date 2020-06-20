@@ -13,8 +13,11 @@ echo "Package Installation Complete!"
 # Install Dotfiles to Home directory
 echo "Installing Dotfiles..."
 
+ln -sf $path/.bashrc $HOME/.bashrc
+ln -sf $path/.profile $HOME/.profile
 ln -sf $path/.gitconfig $HOME/.gitconfig
 ln -sf $path/.xinitrc $HOME/.xinitrc
+ln -sf $path/.tmux.conf $HOME/.tmux.conf
 
 # Install config files into Config directory
 [ ! -d $HOME/.config ] && mkdir $HOME/.config
@@ -30,9 +33,6 @@ ln -sf $path/config/polybar $HOME/.config/polybar
 
 [ -d $HOME/.config/sxhkd ] && rm -rf $HOME/.config/sxhkd
 ln -sf $path/config/sxhkd $HOME/.config/sxhkd
-
-# Individual files
-ln -sf $path/.tmux.conf $HOME/.tmux.conf
 
 # Scripts - them in ~/.bin
 mkdir -p $HOME/.bin
