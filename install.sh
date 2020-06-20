@@ -34,7 +34,7 @@ ln -sf $path/config/polybar $HOME/.config/polybar
 ln -sf $path/config/sxhkd $HOME/.config/sxhkd
 
 # Individual files
-ln -sf $path/tmux.conf $HOME/.tmux.conf
+ln -sf $path/.tmux.conf $HOME/.tmux.conf
 
 # Scripts - put in ~/.local/bin
 mkdir -p $HOME/.local/bin
