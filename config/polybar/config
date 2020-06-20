@@ -9,12 +9,11 @@ alert = #ed0b0b
 bordercolor = #4c566a
 
 [settings]
-format-background = ${colors.background-alt}
 screenchange-reload = true
 
 [global/wm]
 margin-top = 0
-margin-bottom = 0 
+margin-bottom = 0
 
 ; ==================
 ; Primary Bar Config
@@ -60,7 +59,7 @@ cursor-scroll = ns-resize
 type = internal/bspwm
 
 label-focused = %name%
-;label-focused-background = ${colors.background-wm}
+label-focused-background = ${colors.background-wm}
 label-focused-padding = 1
 
 label-occupied = %name%
