@@ -33,8 +33,6 @@ radius = 0.0
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
-
 padding = 0
 module-margin-left = 0
 module-margin-right = 0
