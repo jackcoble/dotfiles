@@ -21,3 +21,4 @@ dbus
 noto-fonts-ttf
 xclip
 fzf
+mpv
