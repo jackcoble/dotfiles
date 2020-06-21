@@ -22,3 +22,5 @@ noto-fonts-ttf
 xclip
 fzf
 mpv
+alsa-utils
+rofi
