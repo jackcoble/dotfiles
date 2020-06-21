@@ -24,3 +24,4 @@ fzf
 mpv
 alsa-utils
 rofi
+connman
