@@ -49,3 +49,7 @@ super + f
 # Terminal
 super + Return
 	$TERMINAL
+
+# Rofi
+super + space
+	rofi -show run
