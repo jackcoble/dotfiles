@@ -53,3 +53,7 @@ super + Return
 # Rofi
 super + space
 	rofi -show run
+
+# Stream script
+super + shift + s
+	$TERMINAL -e stream
