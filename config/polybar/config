@@ -43,7 +43,7 @@ font-0 = Fira Code Nerd Font:pixelsize=10;1
 font-1 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 
 modules-left = bspwm xwindow
-modules-right = cpu memory updates date
+modules-right = updates cpu memory date
 
 tray-position = right
 tray-padding = 1
