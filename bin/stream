@@ -2,23 +2,18 @@
 # A simple script to stream from my Minio instance into MPV
 
 # Set the Minio instance (same as mc cli)
+MC=/usr/bin/mc
 HOST=minpi
 BUCKET=tv-shows
 
 # Setting the instance
 INSTANCE=$HOST/$BUCKET
 
-# Find a TV show based on the name and episode number
-# e.g. mc find minpi/tv-shows --name "Billions*S04E11*"
-EPISODE=$(/usr/bin/mc find $INSTANCE --name "$1*$2*")
-if [ -z "$EPISODE" ]; then
-    echo "Episode not found for $1"
-else
-    echo "Found an episode for $1 - $2"
-fi
+# Find a TV show using fzf
+EPISODE=$($MC ls --recursive $INSTANCE | awk '{$1=""; $2=""; $3=""; $4=""; print}' | sed -e 's/^[ \t]*//' | fzf)
 
 # Now I need to share the file now that we've got the path for it
-URL=$(/usr/bin/mc share download "$EPISODE" | grep -E "Share:" | sed 's/Share: //g')
+URL=$($MC share download "$INSTANCE/$EPISODE" | grep -E "Share:" | sed 's/Share: //g')
 
 # Lastly, launch MPV!
-/usr/bin/mpv "$URL"
+/usr/bin/mpv --fs "$URL"
