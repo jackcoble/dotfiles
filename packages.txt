@@ -25,3 +25,4 @@ mpv
 alsa-utils
 rofi
 connman
+feh
