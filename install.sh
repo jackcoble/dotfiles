@@ -37,6 +37,10 @@ ln -sf $path/config/polybar $HOME/.config/polybar
 [ -d $HOME/.config/picom ] && rm -rf $HOME/.config/picom
 ln -sf $path/config/picom $HOME/.config/picom
 
+[ -d $HOME/.config/rofi ] && rm -rf $HOME/.config/rofi
+ln -sf $path/config/rofi $HOME/.config/rofi
+
+
 [ -d $HOME/.config/sxhkd ] && rm -rf $HOME/.config/sxhkd
 ln -sf $path/config/sxhkd $HOME/.config/sxhkd
 
