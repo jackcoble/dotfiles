@@ -5,6 +5,7 @@ bspc rule -r "*"
 picom -b --experimental-backends &
 xset r rate 210 40
 dunst &
+$HOME/.fehbg &
 $HOME/.config/polybar/launchpolybar &
 
 # Monitors
