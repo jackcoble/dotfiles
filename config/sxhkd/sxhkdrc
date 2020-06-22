@@ -52,7 +52,7 @@ super + Return
 
 # Rofi
 super + space
-	rofi -show run
+	rofi -show run -config $HOME/.config/rofi/rofi.conf
 
 # Stream script
 super + shift + s
