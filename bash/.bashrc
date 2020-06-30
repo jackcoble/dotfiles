@@ -17,3 +17,4 @@ export PS1;
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
+export TERM=xterm
