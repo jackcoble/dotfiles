@@ -26,11 +26,8 @@ enable-ipc = true
 fixed-center = false
 bottom = false
 
-border-bottom-size = 2
-border-bottom-color = ${colors.bordercolor}
-
 width = 100%
-height = 25
+height = 24
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -43,7 +40,7 @@ font-0 = Fira Code Nerd Font:pixelsize=10;1
 font-1 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 
 modules-left = bspwm xwindow
-modules-right = updates cpu memory date
+modules-right = date
 
 tray-position = right
 tray-padding = 1
@@ -81,28 +78,6 @@ label-empty-padding = 1
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-
-; Display RAM usage
-[module/memory]
-type = custom/script
-exec = $HOME/.config/polybar/scripts/memory
-label = "%output%"
-interval = 10
-format-prefix = " "
-
-; Display package updates
-[module/updates]	
-type = custom/script	
-exec = $HOME/.config/polybar/scripts/packagecount	
-label = "%output%"	
-interval = 3600
-
-; Display CPU usage
-[module/cpu]
-type = internal/cpu
-interval = 2
-label = %percentage%%
-format-prefix = " "
 
 ; Show the current time
 [module/date]
