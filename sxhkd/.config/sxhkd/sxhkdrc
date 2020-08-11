@@ -10,6 +10,10 @@ super + shift + Escape
 super + shift + w
 	bspc wm -r
 
+# Restart sxhkd
+super + Escape
+	pkill -USR1 -x sxhkd
+
 # Kill Window/Pane
 super + shift + q
 	xdo close
@@ -34,17 +38,13 @@ super + shift + {h,j,k,l}
 super + {0-9}
 	bspc desktop -f {0-9}
 
-# Cycle through Desktops
-super + alt + {h, l}
-	bspc desktop -f {prev, next}
-
 # Fullscreen
 super + f
 	bspc node -t \~fullscreen
 
-# ==============
-# Programs
-# ==============
+# ===================
+# Individual Bindings
+# ===================
 
 # Terminal
 super + Return
@@ -53,3 +53,17 @@ super + Return
 # Rofi
 super + space
 	rofi -show run -config $HOME/.config/rofi/rofi.conf
+
+# Display Brightness
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+# Volume Control
+XF86AudioRaiseVolume
+	amixer set "Master" 2%+
+
+XF86AudioLowerVolume
+	amixer set "Master" 2%-
