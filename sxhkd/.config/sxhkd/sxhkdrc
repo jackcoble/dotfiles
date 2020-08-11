@@ -48,12 +48,8 @@ super + f
 
 # Terminal
 super + Return
-	$TERMINAL
+	alacritty
 
 # Rofi
 super + space
 	rofi -show run -config $HOME/.config/rofi/rofi.conf
-
-# Stream script
-super + shift + s
-	$TERMINAL -e stream
