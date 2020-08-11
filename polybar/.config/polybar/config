@@ -39,7 +39,7 @@ module-margin-right = 1
 font-0 = Fira Code Nerd Font:pixelsize=10;1
 font-1 = NotoColorEmoji:fontformat=truetype:scale=10:antialias=false;
 
-modules-left = bspwm xwindow
+modules-left = bspwm
 modules-right = date
 
 tray-position = right
@@ -73,11 +73,6 @@ label-empty-padding = 1
 ; ==================
 ; Custom Modules
 ; ==================
-
-; Display window name
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
 
 ; Show the current time
 [module/date]
