@@ -1,3 +1,8 @@
 [user]
 	name = Jack Coble
 	email = jackcoble@tutanota.com
+	signingkey = 1E7CEC0A79972B64
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
