@@ -77,9 +77,8 @@ label-empty-padding = 1
 ; Show the current time
 [module/date]
 type = internal/date
-label =  %date%   %time%
-date = %d-%m-%Y
-time = %H:%M
+label = %date%
+date = %A %d-%m-%Y %H:%M %p
 interval = 5
 
 ; vim:ft=dosini
