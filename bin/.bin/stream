@@ -15,5 +15,7 @@ EPISODE=$($MC ls --recursive $INSTANCE | awk '{$1=""; $2=""; $3=""; $4=""; print
 # Now I need to share the file now that we've got the path for it
 URL=$($MC share download "$INSTANCE/$EPISODE" | grep -E "Share:" | sed 's/Share: //g')
 
+notify-send "Stream" "Streaming $EPISODE!"
+
 # Lastly, launch MPV!
 /usr/bin/mpv --fs "$URL"
