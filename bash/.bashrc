@@ -10,8 +10,9 @@ PATH=$PATH:$HOME/.bin
 bind 'set completion-ignore-case on'
 
 # Prompt settings
-PS1="\e[0;32m \w > \e[0m";
-export PS1;
+green="\001$(tput setaf 2)\002"
+reset="\001$(tput sgr0)\002"
+export PS1="$green\W > $reset";
 
 # Default applications
 export EDITOR="nvim"
