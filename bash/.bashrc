@@ -18,3 +18,8 @@ export PS1="$green\W > $reset";
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
+
+
+# Invoke GPG Agent
+GPG_TTY=$(tty)
+export GPG_TTY
