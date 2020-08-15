@@ -13,3 +13,35 @@ let g:sonokai_style = 'andromeda'
 let g:sonokai_enable_italic = 1
 let g:sonokai_disable_italic_comment = 1
 colorscheme sonokai
+
+" ====================
+" Basic setup
+" ====================
+filetype plugin indent on
+
+set encoding=utf-8
+set fileencoding=utf-8
+
+" Tabs
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set expandtab
+
+" Map leader to ,
+let mapleader=','
+
+" ====================
+" Visual settings
+" ====================
+syntax on
+set ruler
+set number
+
+" ===================
+" Mappings
+" ===================
+
+" Tabbing
+vnoremap < <gv
+vnoremap > >gv
