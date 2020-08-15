@@ -48,7 +48,7 @@ super + f
 
 # Terminal
 super + Return
-	alacritty
+	$TERMINAL
 
 # Rofi
 super + space
