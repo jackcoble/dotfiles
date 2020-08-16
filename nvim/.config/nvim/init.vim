@@ -2,6 +2,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	
     " Go language support
     Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+    
+    " Markdown
+    Plug 'plasticboy/vim-markdown'
+
+    " Auto close parens, brackets, braces, etc
+    Plug 'jiangmiao/auto-pairs'
 
     " Theme
     Plug 'sainnhe/sonokai'
@@ -45,3 +51,9 @@ set number
 " Tabbing
 vnoremap < <gv
 vnoremap > >gv
+
+" Disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
