@@ -25,6 +25,8 @@ colorscheme sonokai
 " ====================
 filetype plugin indent on
 
+let g:go_fmt_command = "goimports"
+
 set encoding=utf-8
 set fileencoding=utf-8
 
