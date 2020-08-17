@@ -9,6 +9,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto close parens, brackets, braces, etc
     Plug 'jiangmiao/auto-pairs'
 
+    " Rust
+    Plug 'rust-lang/rust.vim'
+
     " Theme
     Plug 'sainnhe/sonokai'
 
