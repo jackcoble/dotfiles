@@ -3,7 +3,7 @@ env:
 colors:
   # Colors (Molokai Dark)
   primary:
-    background: '#1B1D1E'
+    background: '#1C1C1C'
     foreground: '#F8F8F2'
   # Normal colors
   normal:
