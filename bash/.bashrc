@@ -12,6 +12,3 @@ bind 'set completion-ignore-case on'
 green="\001$(tput setaf 2)\002"
 reset="\001$(tput sgr0)\002"
 export PS1="$green\W > $reset";
-
-# Invoke GPG Agent
-export GPG_TTY=$(tty)
