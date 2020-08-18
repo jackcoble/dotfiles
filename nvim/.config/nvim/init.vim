@@ -21,6 +21,9 @@ Plug 'junegunn/fzf'
 Plug 'machakann/vim-highlightedyank'
 " Colour theme
 Plug 'tomasr/molokai'
+" Language server
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/async.vim'
 call plug#end()
 
 " ========================
@@ -111,3 +114,17 @@ set signcolumn=yes
 " [fatih/vim-go]
 " Auto import on save
 let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+
+" ========================
+" Language servers
+" ========================
+" Go
+if executable('gopls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls']},
+        \ 'whitelist': ['go'],
+        \ })
+    autocmd BufWritePre *.go LspDocumentFormatSync
+endif
