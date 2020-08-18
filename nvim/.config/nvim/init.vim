@@ -107,3 +107,7 @@ let g:AutoPairsMapSpace=0
 " [airblade/vim-gitgutter]
 " Git Gutter always shows
 set signcolumn=yes
+
+" [fatih/vim-go]
+" Auto import on save
+let g:go_fmt_command = "goimports"
