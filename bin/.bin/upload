@@ -1,26 +1,42 @@
 #!/bin/bash
 # upload
 
-MC_CLI=/usr/bin/mc
+# S3 variables
+S3_ENDPOINT=https://s3.eu-central-003.backblazeb2.com
+S3_BUCKET=static-coble-uk
+
+# Reverse proxy domain
+RP_DOMAIN=s.coble.uk
 
 # Get the date in YYYY-MM-DD format
 DATE=$(date '+%Y-%m-%d')
 
-if [ $# -eq 0 ]
+# Create a temp directory
+TMP=$(mktemp -u)
+mkdir -p "$TMP/$DATE"
+
+for src in "$@"
+do
+    # If there is no file, exit
+    if ! test -f "$src"
     then
-        echo "No file was supplied..."
-        exit 0;
-    else
-        # Upload the file to the MinIO Bucket
-        $MC_CLI cp "$1" "minio/public/$DATE/"
+        echo Missing filename "$src" >&2
+        continue
+    fi
 
-        # Get base name of file
-        base=$(basename "$1")
+    # If presented with a directory, tar it
+    if test -d "$src"
+    then
+        tar="$(basename $src).tar"
+		tar cvf "$tar" "$src"
+		src="$tar"
+    fi
 
-        # Copy the resulting URL to our clipboard and output to terminal
-        URL=https://s.3xpl0its.xyz/$DATE/$base
-        echo $URL | xclip -selection clipboard;
-        
-        # Dunst notification
-        notify-send --expire-time=5000 -i view-fullscreen "MinIO Upload" "  Uploaded $base to MinIO server!"
-fi
+    # Upload to s3 bucket
+    aws s3 cp $src s3://$S3_BUCKET/$DATE/ --endpoint-url=$S3_ENDPOINT > /dev/null 2>&1
+    
+    URL=$RP_DOMAIN/$DATE/$(basename $src)
+    echo $URL
+    echo $URL | xclip -selection clipboard;
+
+done
