@@ -21,6 +21,3 @@ export BROWSER="firefox"
 
 # Invoke GPG Agent
 export GPG_TTY=$(tty)
-
-# Start xorg on tty1 if not already running
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x Xorg >/dev/null && exec startx

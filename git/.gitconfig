@@ -2,8 +2,8 @@
     editor = nvim
 [user]
 	name = Jack Coble
-	email = jack@3xpl0its.xyz
-	signingkey = 1E7CEC0A79972B64
+	email = jack@coble.uk
+	signingkey = E0C87ABD8F4BC40F
 [commit]
 	gpgsign = true
 [gpg]
