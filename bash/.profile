@@ -21,4 +21,4 @@ export BROWSER="firefox"
 
 # Invoke GPG Agent
 export GPG_TTY=$(tty)
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agenet-ssh-socket)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
