@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd /tmp
-scrot "$@" '%s_$wx$h.png' -s -e 'upload $f'
