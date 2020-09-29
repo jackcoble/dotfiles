@@ -15,7 +15,7 @@ reset="\001$(tput sgr0)\002"
 export PS1="$green\W > $reset";
 
 # Aliases
-alias dots='git --work-tree=$HOME --git-dir=$HOME/.dotfiles/.git'
+alias dots='git --work-tree=$HOME --git-dir=$HOME/.dotfiles'
 alias vim="nvim"
 
 # GPG Agent
