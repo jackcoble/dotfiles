@@ -17,3 +17,7 @@ export PS1="$green\W > $reset";
 # Aliases
 alias dots='git --work-tree=$HOME --git-dir=$HOME/.dotfiles/.git'
 alias vim="nvim"
+
+# GPG Agent
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)

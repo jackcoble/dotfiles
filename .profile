@@ -7,7 +7,3 @@ export PATH="$PATH:$HOME/.cargo/bin"
 
 # Go
 export GOPATH="$HOME/code/go"
-
-# GPG Agent
-export GPG_TTY=$(tty)
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
