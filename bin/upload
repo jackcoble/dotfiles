@@ -1,0 +1,42 @@
+#!/bin/bash
+# upload
+
+# S3 variables
+S3_ENDPOINT=https://s3.eu-central-003.backblazeb2.com
+S3_BUCKET=static-coble-uk
+
+# Reverse proxy domain
+RP_DOMAIN=https://s.coble.uk
+
+# Get the date in YYYY-MM-DD format
+DATE=$(date '+%Y-%m-%d')
+
+# Create a temp directory
+TMP=$(mktemp -u)
+mkdir -p "$TMP/$DATE"
+
+for src in "$@"
+do
+    # If there is no file, exit
+    if ! test -f "$src"
+    then
+        echo Missing filename "$src" >&2
+        continue
+    fi
+
+    # If presented with a directory, tar it
+    if test -d "$src"
+    then
+        tar="$(basename $src).tar"
+		tar cvf "$tar" "$src"
+		src="$tar"
+    fi
+
+    # Upload to s3 bucket
+    aws s3 cp $src s3://$S3_BUCKET/$DATE/ --endpoint-url=$S3_ENDPOINT > /dev/null 2>&1
+    
+    URL=$RP_DOMAIN/$DATE/$(basename $src)
+    echo $URL
+    echo $URL | xclip -selection clipboard;
+
+done
