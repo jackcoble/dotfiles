@@ -6,8 +6,8 @@
 # ██╗██████╦╝██║░░██║██████╔╝██║░░██║██║░░██║╚█████╔╝
 # ╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░
 
-# Some basic settings
-bind 'set completion-ignore-case on'
+# Defaults
+export EDITOR=nvim
 
 # Prompt settings
 green="\001$(tput setaf 2)\002"
@@ -16,3 +16,4 @@ export PS1="$green\W > $reset";
 
 # Aliases
 alias dots='git --work-tree=$HOME --git-dir=$HOME/.dotfiles/.git'
+alias vim="nvim"
