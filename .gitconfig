@@ -1,0 +1,11 @@
+[core]
+    editor = nvim
+[user]
+	name = Jack Coble
+	email = jack@coble.uk
+	signingkey = E0C87ABD8F4BC40F
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
+
