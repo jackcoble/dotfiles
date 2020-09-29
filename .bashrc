@@ -1,2 +1,18 @@
-# Alias for managing my dotfiles
+
+# ░░░██████╗░░█████╗░░██████╗██╗░░██╗██████╗░░█████╗░
+# ░░░██╔══██╗██╔══██╗██╔════╝██║░░██║██╔══██╗██╔══██╗
+# ░░░██████╦╝███████║╚█████╗░███████║██████╔╝██║░░╚═╝
+# ░░░██╔══██╗██╔══██║░╚═══██╗██╔══██║██╔══██╗██║░░██╗
+# ██╗██████╦╝██║░░██║██████╔╝██║░░██║██║░░██║╚█████╔╝
+# ╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░
+
+# Some basic settings
+bind 'set completion-ignore-case on'
+
+# Prompt settings
+green="\001$(tput setaf 2)\002"
+reset="\001$(tput sgr0)\002"
+export PS1="$green\W > $reset";
+
+# Aliases
 alias dots='git --work-tree=$HOME --git-dir=$HOME/.dotfiles/.git'
