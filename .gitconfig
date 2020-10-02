@@ -3,7 +3,7 @@
 [user]
 	name = Jack Coble
 	email = jack@coble.uk
-	signingkey = E0C87ABD8F4BC40F
+	signingkey = E5B1B9260FA9AA26
 [commit]
 	gpgsign = true
 [gpg]
