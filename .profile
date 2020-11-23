@@ -7,3 +7,6 @@ export PATH="$PATH:$HOME/.cargo/bin"
 
 # Go
 export GOPATH="$HOME/code/go"
+
+# GPG Pinentry
+echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
