@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+restic=/usr/bin/restic
+
+# Unlock restic repository
+$restic unlock
+
+# Backup documents folder in home directory
+$restic backup --verbose "$HOME/Documents"
+
+# Forget and prune backups
+$restic forget --keep-daily 7 --keep-weekly 5 --keep-monthly 4 --prune
