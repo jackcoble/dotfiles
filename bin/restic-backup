@@ -2,6 +2,9 @@
 
 restic=/usr/bin/restic
 
+# Source credentials
+. $HOME/.restic.env
+
 # Unlock restic repository
 $restic unlock
 
