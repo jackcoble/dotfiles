@@ -11,3 +11,4 @@ export GOPATH="$HOME/code/go"
 
 # GPG Pinentry
 echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
+source "$HOME/.cargo/env"
