@@ -8,8 +8,8 @@ restic=/usr/bin/restic
 # Unlock restic repository
 $restic unlock
 
-# Backup documents folder in home directory
-$restic backup --verbose "$HOME/Documents"
+# Backup MEGA.nz folder
+$restic backup --verbose "$HOME/MEGA"
 
 # Forget and prune backups
 $restic forget --keep-daily 7 --keep-weekly 5 --keep-monthly 4 --prune
