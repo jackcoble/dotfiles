@@ -8,5 +8,8 @@ source ~/.config/fish/gnupg.fish
 set -x GOPATH $HOME/code/go
 set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
 
+# NPM
+set PATH $HOME/.npm-global/bin $PATH
+
 # Dotfiles bare repo alias
 alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
