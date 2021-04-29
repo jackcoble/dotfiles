@@ -2,7 +2,7 @@
 set -U fish_greeting
 
 # Load in GPG
-source ~/.config/fish/gnupg.fish
+source $HOME/.config/fish/gnupg.fish
 
 # Go
 set -x GOPATH $HOME/code/go
