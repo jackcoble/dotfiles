@@ -1,15 +1,17 @@
 # Dotfiles
 
+This repository contains my dotfiles which have been updated for MacOS Big Sur.
+
 ## Installing on a new machine
 ```bash
 # Setting a temporary alias
 $ alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-$ git clone https://github.com/jackcoble/dotfiles.git $HOME/.dotfiles
-$ git checkout
+
+$ git clone --bare https://github.com/jackcoble/dotfiles.git $HOME/.dotfiles
+$ dots checkout
 ```
 
-## Setting up GPG on Fedora to work with YubiKey
+## Installing packages using [Brew](https://brew.sh/)
 ```bash
-$ sudo dnf install pcsc-lite
-$ sudo systemctl disable --now pcscd.socket pcscd.service
+$ brew bundle
 ```
