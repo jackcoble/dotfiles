@@ -1,8 +1,14 @@
 # Disable welcome prompt
 set -U fish_greeting
 
-# Load in GPG
+# Load in GPG agent
 source $HOME/.config/fish/gnupg.fish
+
+# Aliases
+if type -q exa
+  alias ll "exa -l -g --icons"
+  alias lla "ll -a"
+end
 
 # Go
 set -x GOPATH $HOME/code/go
