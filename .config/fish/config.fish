@@ -18,8 +18,9 @@ end
 set -x GOPATH $HOME/code/go
 set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
 
-# NPM
+# NPM and Yarn
 set PATH $HOME/.npm-global/bin $PATH
+set PATH $HOME/.yarn/bin $PATH
 
 # Android SDK
 set --export ANDROID $HOME/Library/Android;
