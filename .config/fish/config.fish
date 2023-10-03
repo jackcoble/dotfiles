@@ -5,10 +5,15 @@ set -U fish_greeting
 source $HOME/.config/fish/gnupg.fish
 
 # Aliases
-if type -q exa
-  alias ll "exa -l -g --icons"
-  alias lla "ll -a"
+# AWS CLI (Load in credentials from Pass)
+function load_aws_cli
+  set -x AWS_ACCESS_KEY_ID (pass show Development/AWS/Personal | sed -n 's/access-key-id: //p')
+  set -x AWS_SECRET_ACCESS_KEY (pass show Development/AWS/Personal | sed -n 's/secret-access-key: //p')
+
+  command aws $argv
 end
+
+alias aws="load_aws_cli"
 
 # Go
 set -x GOPATH $HOME/code/go
@@ -20,4 +25,3 @@ set PATH $HOME/.yarn/bin $PATH
 
 # Dotfiles bare repo alias
 alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-set -g fish_user_paths "/usr/local/opt/openjdk/bin" $fish_user_paths
