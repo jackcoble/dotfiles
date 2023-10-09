@@ -16,7 +16,7 @@ end
 alias aws="load_aws_cli"
 
 # Go
-set -x GOPATH $HOME/code/go
+set -x GOPATH $HOME/go
 set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
 
 # NPM and Yarn
