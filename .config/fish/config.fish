@@ -21,7 +21,7 @@ set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
 
 # NPM and Yarn
 set PATH $HOME/.npm-global/bin $PATH
-set PATH $HOME/.yarn/bin $PATH
+set PATH (yarn global bin) $PATH
 
 # Dotfiles bare repo alias
 alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
