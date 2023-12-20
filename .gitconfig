@@ -1,13 +1,9 @@
 [core]
     editor = nvim
+
 [user]
 	name = Jack Coble
 	email = jack@coble.uk
-	signingkey = E5B1B9260FA9AA26
-[commit]
-	gpgsign = false
-[gpg]
-	program = gpg
 
 [init]
 	defaultBranch = main
