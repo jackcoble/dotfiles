@@ -1,5 +1,6 @@
 [core]
-    editor = nvim
+    	editor = nvim
+	sshCommand = ssh.exe
 
 [user]
 	name = Jack Coble
