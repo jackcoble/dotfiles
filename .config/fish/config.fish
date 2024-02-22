@@ -8,6 +8,10 @@ set -x SSH_AUTH_SOCK $HOME/.1password/agent.sock
 set -x GOPATH $HOME/go
 set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
 
+# NPM and Yarn
+set PATH $HOME/.npm-global/bin $PATH
+set PATH (yarn global bin) $PATH
+
 # Random scripts/binaries
 set PATH $HOME/bin $PATH
 
