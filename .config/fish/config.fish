@@ -15,11 +15,5 @@ set -x PATH $PATH /usr/local/go/bin $GOPATH/bin
 set PATH $HOME/.npm-global/bin $PATH
 set PATH (yarn global bin) $PATH
 
-# Random scripts/binaries
-set PATH $HOME/bin $PATH
-
 # Dotfiles bare repo alias
 alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
-
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
-
