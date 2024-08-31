@@ -1,7 +1,3 @@
-[core]
-    	editor = nvim
-	sshCommand = ssh.exe
-
 [user]
 	name = Jack Coble
 	email = jack@coble.uk
