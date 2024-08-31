@@ -1,6 +1,9 @@
 # Disable welcome prompt
 set -U fish_greeting
 
+# Homebrew
+fish_add_path /opt/homebrew/bin
+
 # 1Password SSH Agent
 set -x SSH_AUTH_SOCK $HOME/.1password/agent.sock
 
@@ -17,3 +20,6 @@ set PATH $HOME/bin $PATH
 
 # Dotfiles bare repo alias
 alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+

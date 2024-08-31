@@ -5,6 +5,13 @@
 [user]
 	name = Jack Coble
 	email = jack@coble.uk
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFPLlFK/s52lYOSNQaN27VD6V4D6kFuZYrDEO0jRPd0P
 
 [init]
 	defaultBranch = main
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
