@@ -17,3 +17,6 @@ set PATH (yarn global bin) $PATH
 
 # Dotfiles bare repo alias
 alias dots="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+# 1Password Plugins
+source $HOME/.config/op/plugins.sh
